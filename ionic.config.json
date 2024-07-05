@@ -1,0 +1,7 @@
+{
+  "name": "p-u3",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
