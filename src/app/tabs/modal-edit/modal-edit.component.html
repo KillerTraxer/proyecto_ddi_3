@@ -11,9 +11,55 @@
 </ion-header>
 <ion-content class="ion-padding">
   <ion-item>
-    <ion-input labelPlacement="stacked"
-      label="Ingresa tu nombre" [(ngModel)]="name"
+    <ion-input
+      labelPlacement="stacked"
+      label="Ingresa tu nombre"
+      [(ngModel)]="name"
       placeholder="Tu nombre"
     ></ion-input>
   </ion-item>
+  <ion-item>
+    <ion-input
+      labelPlacement="stacked"
+      label="Código"
+      [(ngModel)]="code"
+      placeholder="Código"
+      [disabled]="isDisabled"
+    ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input
+      labelPlacement="stacked"
+      label="Categoría"
+      [(ngModel)]="category"
+      placeholder="Categoría"
+      [disabled]="isDisabled"
+    ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input
+      labelPlacement="stacked"
+      label="Precio"
+      [(ngModel)]="price"
+      placeholder="Precio"
+    ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input
+      labelPlacement="stacked"
+      label="Descripción"
+      [(ngModel)]="description"
+      placeholder="Descripción"
+    ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input
+      labelPlacement="stacked"
+      label="Cantidad"
+      [(ngModel)]="amount"
+      placeholder="Cantidad"
+    ></ion-input>
+  </ion-item>
 </ion-content>
+
+

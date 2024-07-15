@@ -42,17 +42,18 @@ export class Tab1Page implements OnInit{
     const modal = await this.modalCtrl.create({
       component: ModalEditComponent,
       componentProps: {
-        item
+        item,
       }
     });
     modal.present();
 
-    const {data, role} = await modal.onWillDismiss();
+    await modal.onWillDismiss().then(() =>{
+      this.getProducts();
+    })
 
-    if (role === 'confirm') {
-      console.log(`Hello, ${data}!`);
-
-    }
+    modal.onDidDismiss().then(()=>{
+      this.getProducts();
+    })
   }
 
   delete(item:any){
