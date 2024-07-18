@@ -8,7 +8,8 @@ import { AuthService } from '../servicios/auth.service';
   styleUrls: ['tab3.page.scss']
 })
 export class Tab3Page implements OnInit{
-
+  email!:string;
+  password!:string;
 
   editForm!: FormGroup
   constructor(private authService:AuthService,
@@ -27,6 +28,7 @@ export class Tab3Page implements OnInit{
   }
 
   login(){
+    console.log(this.editForm.value);
     this.authService.login(this.editForm.value).then(res=>console.log(res));
   }
 
